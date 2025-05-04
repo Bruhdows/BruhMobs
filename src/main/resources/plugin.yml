@@ -1,0 +1,8 @@
+name: BruhMobs
+main: com.bruhdows.mobs.BruhMobs
+api-version: 1.20
+version: 1.0
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:2.1.20
+  - com.fasterxml.jackson.module:jackson-module-kotlin:2.19.0
+  - com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.19.0
