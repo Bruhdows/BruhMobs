@@ -1,0 +1,19 @@
+[versions]
+kotlin = "2.1.10"
+jackson = "2.19.0"
+paperweight = "2.0.0-beta.16"
+shadow = "9.0.0-beta13"
+run-paper = "2.3.1"
+
+[libraries]
+jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version.ref = "jackson" }
+jackson-dataformat-yaml = { group = "com.fasterxml.jackson.dataformat", name = "jackson-dataformat-yaml", version.ref = "jackson" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+paperweight-userdev = { id = "io.papermc.paperweight.userdev", version.ref = "paperweight" }
+run-paper = { id = "xyz.jpenilla.run-paper", version.ref = "run-paper" }
+
+[bundles]
+jackson = [ "jackson-module-kotlin", "jackson-dataformat-yaml" ]

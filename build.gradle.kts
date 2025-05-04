@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm") version "2.1.10"
-    id("com.gradleup.shadow") version "9.0.0-beta13"
-    id("io.papermc.paperweight.userdev") version "2.0.0-beta.16"
-    id("xyz.jpenilla.run-paper") version "2.3.1"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.shadow)
+    alias(libs.plugins.paperweight.userdev)
+    alias(libs.plugins.run.paper)
 }
 
 group = "com.bruhdows"
@@ -14,8 +14,7 @@ repositories {
 
 dependencies {
     paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
-    compileOnly("com.fasterxml.jackson.module:jackson-module-kotlin:2.19.0")
-    compileOnly("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.19.0")
+    compileOnly(libs.bundles.jackson)
 }
 
 kotlin {
@@ -27,7 +26,6 @@ tasks.jar {
 }
 
 tasks.shadowJar {
-    enableRelocation = false
     dependencies {
         exclude(dependency("org.jetbrains.kotlin:kotlin-stdlib"))
     }
